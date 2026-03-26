@@ -46,10 +46,10 @@ code_blocks:
 # Formal:
 #   icon: link || the description || color
 social:
-   fab fa-github: https://github.com/znand-dev || Github || '#575264'
+   fab fa-github: https://github.com/znandev || Github || '#575264'
    fas fa-envelope: mailto:nannozeta@proton.me || Email || '#7de056'
    fa-brands fa-twitter: https://twitter.com/nannozeta || Twitter || '#4a7dbe'
-   fa-brands fa-instagram: https://instagram.com/znand_ || Instagram || '#e06656'
+   fa-brands fa-instagram: https://instagram.com/znandev || Instagram || '#e06656'
    fa-brands fa-telegram: https://t.me/nandzie || Telegram || '#3c9be3'
 
 # --------------------------------------
