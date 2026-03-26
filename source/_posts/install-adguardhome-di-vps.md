@@ -1,4 +1,4 @@
-title: 'Dijamin paham! Inilah cara build Private DNS Server di VPS Menggunakan AdGuard Home + Docker'
+title: 'Dijamin Paham! Inilah Cara Build Private DNS Server Di VPS Menggunakan AdGuard Home + Docker'
 date: 2026-03-26
 cover: /img/adguard-home-dns-server.png
 top_img: /img/default.png
@@ -8,9 +8,7 @@ tags: [Networking, Server, DNS]
 
 ![AdGuard: Local DNS Resolver with upstream DNS servers through DNS over HTTPS ( DoH )](/img/adguard-home-dns-server.png)
 
-AdGuard Home adalah perangkat lunak (software) open-source yang berfungsi sebagai server DNS lokal (self-hosted) dengan kemampuan untuk melakukan pemfilteran lalu lintas DNS secara real-time.
-
-Secara teknis, AdGuard Home bekerja dengan cara menerima permintaan DNS dari perangkat dalam suatu jaringan, kemudian:
+Halo visitians, gimana kabarnya ? Semoga sehat selalu ya. Kali ini saya ingin share cara bangun DNS Server sendiri dengan AdGuardHome menggunakan Docker. Pertama-tama izinkan saya menjelaskan apa itu AdGuardHome. AdGuard Home adalah perangkat lunak (software) open-source yang berfungsi sebagai server DNS lokal (self-hosted) dengan kemampuan untuk melakukan pemfilteran lalu lintas DNS secara real-time. Secara teknis, AdGuard Home bekerja dengan cara menerima permintaan DNS dari perangkat dalam suatu jaringan, kemudian:
 
 - Menganalisis permintaan tersebut berdasarkan daftar filter (blocklist/allowlist)
 - Memblokir domain yang teridentifikasi sebagai iklan, pelacak (tracker), atau berbahaya
