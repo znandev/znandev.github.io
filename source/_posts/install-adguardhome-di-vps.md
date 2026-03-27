@@ -113,7 +113,7 @@ http://IP-VPS:3000 kemudian atur interface, username dan password.
 ### Konfigurasi Upstream DNS & DNSSEC
 Konfigurasi ini bertujuan agar menstabilkan request dan mengenskripsi traffic DNS.
 
-### Upstream DNS
+#### Upstream DNS
 Silakan copy Upstream DNS berikut:
 ```
 https://dns.cloudflare.com/dns-query
