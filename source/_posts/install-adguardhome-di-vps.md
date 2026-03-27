@@ -27,10 +27,11 @@ Halo visitians, gimana kabarnya ? Semoga sehat selalu ya. Kali ini saya ingin sh
 
 #### Persiapan
 
-```apt update && apt upgrade -y
-apt install -y docker.io docker-compose
-systemctl enable docker
-systemctl start docker
+```
+sudo apt update && apt upgrade -y
+sudo apt install -y docker.io docker-compose
+sudo systemctl enable docker
+sudo systemctl start docker
 ```
 
 Cek
@@ -45,13 +46,14 @@ docker-compose --version
 Untuk hindari conflict port 53, matikan DNS Default. Cek apakah digunakan:
 
 ```
-lsof -i :53
+sudo apt install lsof
+sudo lsof -i :53
 ```
 
 Jika benar digunakan silakan stop
 ```
-systemctl stop systemd-resolved
-systemctl disable systemd-resolved
+sudo systemctl stop systemd-resolved
+sudo systemctl disable systemd-resolved
 ```
 
 Edit nameserver ke 1.1.1.1
@@ -65,8 +67,9 @@ nameserver 1.1.1.1
 
 #### Setup directory project
 ```
-mkdir -p /opt/adguardhome
+sudo mkdir -p /opt/adguardhome
 cd /opt/adguardhome
+sudo chown -R $USER:$USER /opt/adguardhome
 nano docker-compose.yml
 ```
 Isi dengan :
@@ -103,9 +106,22 @@ Cek:
 docker ps
 ```
 Open link:
-http://IP-VPS:3000
+http://IP-VPS:3000 kemudian atur interface, username dan password.
 
 > Note: Jangan lupa pastikan port 3000 tidak conflict
 
+### Konfigurasi Upstream DNS & DNSSEC
+Konfigurasi ini bertujuan agar menstabilkan request dan mengenskripsi traffic DNS.
+
+### Upstream DNS
+Silakan copy Upstream DNS berikut:
+```
+https://dns.cloudflare.com/dns-query
+https://dns.google/dns-query
+```
+Buka `Setting` > `DNS Settings` > `Upstream DNS` (pastekan dikolom Upstream DNS) kemudian `Apply`.
+
+#### DNSSEC
+Masih di `DNS Settings` scroll kebawah dibagian `DNS server configuration` centang `Enable DNSSEC` kemudian `Save`.
 
 Ada yang mau ditanyain? Komen aja dibawah ya.
