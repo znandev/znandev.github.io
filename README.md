@@ -10,7 +10,7 @@
 Mulai dari jaringan, Linux, codingan ringan dll via blog
 
 📝 Blog-nya bisa kalian akses di sini ya:  
-**[https://znand.my.id](https://znand.my.id)**
+**[blog.znandev.net](https://blog.znandev.net)**
 
 ---
 
