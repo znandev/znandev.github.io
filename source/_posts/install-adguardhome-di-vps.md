@@ -1,4 +1,4 @@
-title: 'Dijamin Paham! Inilah Cara Build Private DNS Server Di VPS Menggunakan AdGuard Home + Docker'
+title: 'Dijamin Paham! Inilah Cara Build Public DNS Server Di VPS Menggunakan AdGuard Home + Docker'
 date: 2026-03-26
 cover: /img/adguard-home-dns-server.png
 top_img: /img/default.png
@@ -11,7 +11,7 @@ tags: [Networking, Server, DNS]
 Halo visitians, gimana kabarnya ? Semoga sehat selalu ya. Kali ini saya ingin share cara bangun DNS Server sendiri dengan AdGuardHome menggunakan Docker. Pertama-tama izinkan saya menjelaskan apa itu AdGuardHome. AdGuard Home adalah perangkat lunak (software) open-source yang berfungsi sebagai server DNS lokal (self-hosted) dengan kemampuan untuk melakukan pemfilteran lalu lintas DNS secara real-time. Secara teknis, AdGuard Home bekerja dengan cara menerima permintaan DNS dari perangkat dalam suatu jaringan, kemudian:
 
 - Menganalisis permintaan tersebut berdasarkan daftar filter (blocklist/allowlist)
-- Memblokir domain yang teridentifikasi sebagai iklan, pelacak (tracker), atau berbahaya
+- Memblokir domain yang teridentifikasi sebagai iklan, pelacak (tracker) atau mengandung malware berbahaya
 - Meneruskan permintaan yang aman ke server DNS upstream (seperti Cloudflare atau Google DNS)
 - Mengembalikan hasil resolusi ke perangkat pengguna
 
@@ -228,7 +228,7 @@ sudo docker-compose up -d
 Buka `Settings` > `DNS Settings`.
 Centang `Enable encryption (HTTPS, DNS-over-HTTPS and DNS-over-TLS)` kemudian isi:
 
- - Server Name: `dns.domainlu.com`
+ - Server Name: `dns.domainkamu.com`
  - HTTPS port: `443`
  - DNS-over-TLS port: `853`
  - DNS-over-QUIC port: `784`
@@ -242,3 +242,7 @@ Donee! Sekarang DNS Server kamu sudah terenkripsi sempurna.
 
 Ada yang mau ditanyain? Komen aja dibawah ya.
 Terimakasih sudah mampir 🙏😊.
+
+### 🛠️Tools
+- [Find & Check IP](https://whoer.net/)
+- [DNSCheckTools](https://dnscheck.tools/)
