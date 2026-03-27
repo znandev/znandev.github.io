@@ -233,11 +233,12 @@ Centang `Enable encryption (HTTPS, DNS-over-HTTPS and DNS-over-TLS)` kemudian is
  - DNS-over-TLS port: `853`
  - DNS-over-QUIC port: `784`
  - Lokasi/path untuk cert nya: 
-    - `/etc/letsencrypt/live/dns.domainlu.com/fullchain.pem` 
-    - `/etc/letsencrypt/live/dns.domainlu.com/privkey.pem`
+    - `/etc/letsencrypt/live/dns.domainkamu.com/fullchain.pem` 
+    - `/etc/letsencrypt/live/dns.domainkamu.com/privkey.pem`
 
 Kemudian `Save configuration` dan notified `Encryption configuration saved` yaa.
 
 Donee! Sekarang DNS Server kamu sudah terenkripsi sempurna.
 
 Ada yang mau ditanyain? Komen aja dibawah ya.
+Terimakasih sudah mampir 🙏😊.
