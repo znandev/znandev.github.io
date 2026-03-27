@@ -108,9 +108,47 @@ docker ps
 Open link:
 http://IP-VPS:3000 kemudian atur interface, username dan password.
 
-> Note: Jangan lupa pastikan port 3000 tidak conflict
+> Note: Jangan lupa pastikan port 3000 tidak conflict ya 
+
+### Filtering
+
+Untuk filtering iklan, tracker dan malware. Saya sudah siapkan blacklist berikut untuk dipakai 😄:
+```
+filters:
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt
+    name: AdGuard DNS filter
+    id: 1
+  - enabled: true
+    url: https://big.oisd.nl
+    name: OISD Big
+    id: 1772749062
+  - enabled: true
+    url: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt
+    name: Adguard-Pro
+    id: 1772749064
+  - enabled: true
+    url: https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-agh.txt
+    name: Anti-malware-01
+    id: 1772749065
+  - enabled: true
+    url: https://phishing.army/download/phishing_army_blocklist_extended.txt
+    name: Anti-malware-02
+    id: 1772749066
+  - enabled: true
+    url: https://urlhaus.abuse.ch/downloads/hostfile/
+    name: Anti-malware-03
+    id: 1772749067
+  - enabled: true
+    url: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/ultimate.txt
+    name: Brutall-Ads
+    id: 1772749069
+```
+Untuk langsung setting ke adguardhome, silakan edit config adguardhome di `/opt/adguardhome/conf/AdGuardHome.yaml`.
+Ganti bagian `filters` di `AdGuardHome.yaml` dengan filters diatas.
 
 ### Konfigurasi Upstream DNS & DNSSEC
+
 Konfigurasi ini bertujuan agar menstabilkan request dan mengenskripsi traffic DNS.
 
 #### Upstream DNS
