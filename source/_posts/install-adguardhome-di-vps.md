@@ -1,6 +1,6 @@
 title: 'Dijamin Paham! Inilah Cara Build Public DNS Server Di VPS Menggunakan AdGuard Home + Docker'
 date: 2026-03-26
-cover: /img/adguard-home-dns-server.png
+cover: /img/banner_deploy_adguard_vps.png
 top_img: /img/default.png
 tags: [Networking, Server, DNS]
 ---
